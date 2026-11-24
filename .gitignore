@@ -1,0 +1,17 @@
+# Archivos que genera Visual Studio al compilar o abrir la solución
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+
+# Archivos de base de datos y respaldos (la base se crea con los scripts)
+*.bak
+*.mdf
+*.ldf
+
+# Archivos temporales de Windows y Office
+Thumbs.db
+Desktop.ini
+~$*

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>annotations</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <CodePage>65001</CodePage>
+    <!-- Icono del ejecutable (Explorador de Windows, acceso directo y barra de tareas) -->
+    <ApplicationIcon>Recursos\toothly.ico</ApplicationIcon>
+    <Product>Toothly - Sistema de Gestión Odontológica</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="Recursos\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Logos e íconos dentro del .exe (reemplaza Resources.resx) -->
+    <EmbeddedResource Include="Recursos\**\*.png" LogicalName="Toothly.%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
+  </ItemGroup>
+
+</Project>
